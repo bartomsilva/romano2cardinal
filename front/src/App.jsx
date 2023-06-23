@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
-import { BASE_URL_D2E, BASE_URL_R2D } from './constants/constants'
+import { BASE_URL_D2E, BASE_URL_R2C } from './constants/constants'
 import { ContainerCardinal, ContainerExtenso, Input, Main, Span, Titles } from "./appStyle"
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const convertToCardinal = async (romano) => {
     setIsLoading(true)
     try {
-      const path = BASE_URL_R2D + "romano2cardinal/" + romano
+      const path = "BASE_URL_R2C" + "romano2cardinal/" + romano
       const result = await axios.get(path)
       setCardinal(result.data)
     } catch (error) {
